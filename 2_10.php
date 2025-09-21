@@ -1,24 +1,17 @@
 <?php
-define("PRECIO_JUDIAS", 3.50);
-define("PRECIO_PATATAS", 0.40);
-define("PRECIO_TOMATES", 1.00);
-define("PRECIO_MANZANAS", 1.20);
-define("PRECIO_UVAS", 2.50);
+$frutas = ["Judías", "Patatas" , "Tomates", "Manzanas" , "Uvas"];
+$precios = [3.50,0.40,1.00,1.20,2.50];
 
-
-if (PRECIO_JUDIAS < 1.50 ){
-    echo "Judías" . "<br>";
+for ($i = 0; $i < 5; $i++){
+    for($y = 0; $y < 5; $y++){
+        if($i != $y){
+            if($precios[$i] < $precios[$y]){
+                echo $frutas[$i] . " es más barato que " . $frutas[$y] . "<br>";
+            } else if ($precios[$i] > $precios[$y]){
+                echo $frutas[$i] . " es más caro que " . $frutas[$y] . "<br>";
+            } else {
+                echo $frutas[$i] . " y " . $frutas[$y] . " cuestan lo mismo" . "<br>";
+            }
+        }
+    }
 }
-if (PRECIO_PATATAS< 1.50 ){
-    echo "Patatas" . "<br>";
-}
-if (PRECIO_TOMATES < 1.50 ){
-    echo "Tomates" . "<br>"; 
-}
-if (PRECIO_MANZANAS < 1.50 ){
-    echo "Manzanas" . "<br>";
-}
-if (PRECIO_UVAS< 1.50 ){
-    echo "Uvas" . "<br>";
-}
-
