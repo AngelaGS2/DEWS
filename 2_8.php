@@ -28,5 +28,5 @@
     $total = $coste_judias + $coste_patatas + $coste_tomates + $coste_manzanas + $coste_uvas;
     echo "<b>Total: " . number_format($total, 2) . "€</b><br><br>";
 
-    echo "¡Gracias por su compra!";
+    echo "Gracias por su compra";
 ?>
